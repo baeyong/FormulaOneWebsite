@@ -1,0 +1,11 @@
+.list-right{
+    position:absolute;
+    right:0%;
+    left:50%;;
+}
+
+.list-left{
+    position:absolute;
+    right:0%;
+    left:0%
+}
