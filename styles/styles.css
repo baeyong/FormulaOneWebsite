@@ -1,11 +1,18 @@
 .list-right{
     position:absolute;
     right:0%;
-    left:50%;;
+    left:70%;
 }
 
 .list-left{
     position:absolute;
     right:0%;
-    left:0%
+    left:20%;
+}
+
+.wc{
+    bottom:0%;
+    top:80%;
+    left:45%;
+    position:absolute;
 }
