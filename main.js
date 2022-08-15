@@ -21,10 +21,10 @@ fetch(apiUrl)
       console.log("this is each race", race)
       let R = document.createElement("li");
       let a = document.createElement("p");
-      // a.setAttribute("href", race.url);
-      // a.setAttribute("rel", "noopener noreferrer");
+      a.setAttribute("href", race.url);
+      a.setAttribute("rel", "noopener noreferrer");
       a.setAttribute("target", "_blank");
-      a.addEventListener("click", function () { myFunction(race.raceName) });
+      a.addEventListener("click", function() {myFunction(race.raceName)});
       a.setAttribute("style", "padding-top: 3px;");
       a.textContent = race.raceName;
       R.className = "race-List";
@@ -48,18 +48,59 @@ fetch(apiUrl)
       .then(res => res.json())
       .then((file2) => {console.log(file2.MRData.RaceTable.Races)
         for(let i = 0; i < file2.MRData.RaceTable.Races.length; i++){
-          if(file2.data.MRData.RaceTable.Races[i].raceName == raceName){
-              let R = document.createElement("li")
-              let a = document.createElement("p");
+          if(file2.MRData.RaceTable.Races[i].raceName == raceName){
+              let R = document.createElement("li");
+              let r = document.createElement("p");
 
-              a.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
-              a.setAttribute("target", "_blank");
-              a.setAttribute("rel", "noopener noreferrer");
-              a.setAttribute("style" ,"padding-top: 3px");
-              a.textContent = file2.MRData.RaceTable.Races[i].url;
+              r.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
+              r.setAttribute("target", "_blank");
+              r.setAttribute("rel", "noopener noreferrer");
+              r.setAttribute("style" ,"padding-top: 3px");
+              r.textContent = "Round: "
+              r.textContent += file2.MRData.RaceTable.Races[i].round;
               R.className = "facts";
-              R.appendChild(a);
+              R.appendChild(r);
+
+              let C = document.createElement("li");
+              let c = document.createElement("p");
+
+              c.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
+              c.setAttribute("target", "_blank");
+              c.setAttribute("rel", "noopener noreferrer");
+              c.setAttribute("style" ,"padding-top: 3px");
+              c.textContent = "Date: ";
+              c.textContent += file2.MRData.RaceTable.Races[i].date;
+              C.className = "facts";
+              C.appendChild(c);
+
+              let F = document.createElement("li");
+              let f = document.createElement("p");
+
+              f.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
+              f.setAttribute("target", "_blank");
+              f.setAttribute("rel", "noopener noreferrer");
+              f.setAttribute("style" ,"padding-top: 3px");
+              f.textContent = "Time: ";
+              f.textContent += file2.MRData.RaceTable.Races[i].time;
+              F.className = "facts";
+              F.appendChild(f);
+
+              let D = document.createElement("li");
+              let d = document.createElement("a");
+
+              d.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
+              d.setAttribute("target", "_blank");
+              d.setAttribute("rel", "noopener noreferrer");
+              d.setAttribute("style" ,"padding-top: 3px");
+              d.textContent += file2.MRData.RaceTable.Races[i].url;
+              D.className = "facts";
+              D.appendChild(d);
+  
               facts.appendChild(R);
+              facts.appendChild(C);
+              facts.appendChild(F);
+              facts.appendChild(D);
+              
 
           }// if
 
