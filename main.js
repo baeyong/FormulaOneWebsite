@@ -21,6 +21,8 @@ fetch(apiUrl)
       console.log("this is each race", race)
       let R = document.createElement("li");
       let a = document.createElement("p");
+      // a.setAttribute("href", race.url);
+      // a.setAttribute("rel", "noopener noreferrer");
       a.setAttribute("target", "_blank");
       a.addEventListener("click", function () { myFunction(race.raceName) });
       a.setAttribute("style", "padding-top: 3px;");
@@ -34,6 +36,35 @@ fetch(apiUrl)
   }
   );
 
-function myFunction(x) {
+  function myFunction(raceName){
+    const api2 = {
+      url:"http://ergast.com/api/f1/2021.json"
+    };
+    const {url} = api2;
+    const apiUrl2 = `${url}`;
 
-}
+    document.getElementById("root").innerHTML = "";
+    fetch(apiUrl2)
+      .then(res => res.json())
+      .then((file2) => {console.log(file2.MRData.RaceTable.Races)
+        for(let i = 0; i < file2.MRData.RaceTable.Races.length; i++){
+          if(file2.data.MRData.RaceTable.Races[i].raceName == raceName){
+              let R = document.createElement("li")
+              let a = document.createElement("p");
+
+              a.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
+              a.setAttribute("target", "_blank");
+              a.setAttribute("rel", "noopener noreferrer");
+              a.setAttribute("style" ,"padding-top: 3px");
+              a.textContent = file2.MRData.RaceTable.Races[i].url;
+              R.className = "facts";
+              R.appendChild(a);
+              facts.appendChild(R);
+
+          }// if
+
+        }// for loop for file2.MRData.RaceTable.Races
+      
+      }) // then
+
+  }// myFunction
