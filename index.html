@@ -3,30 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height"
+    />
     <title>Formula One Race Guide</title>
 
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <style>
+      body {
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
   </head>
 
   <body>
-    <center>
-    <div class = "header">
-        <img src="pictures/formula1header.png" />
+    <div class="background">
+      <img src="pictures/formula 1 background.jpeg" />
     </div>
-   
-      <h2>Your pit stop to the 2021 Season</h2>
-    </center>
+
+    <div class="header">
+      <img src="pictures/f1-logo.png" width="500" height="100" />
+    </div>
+
+    <div class="header2">
+      <h2>Your pitstop to the 2021 Season</h2>
+    </div>
 
     <div class="list-left">
-      <h3>Rounds</h3>
-      <ol class="race-List"></ol>
+      <div class="list-left-background">
+        <ol class="race-List">
+          <p class="list-head" style="font-size: 25px">Rounds</p>
+        </ol>
+      </div>
     </div>
 
     <div class="list-right">
-      <h3>Facts</h3>
       <ul class="facts" id="root">
-        Click a race for some facts!
+        <p class="list-head" style="font-size: 25px">Facts</p>
+        <p>Click on a Race!</p>
       </ul>
     </div>
   </body>

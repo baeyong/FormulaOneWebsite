@@ -25,7 +25,6 @@ fetch(apiUrl)
       a.setAttribute("rel", "noopener noreferrer");
       a.setAttribute("target", "_blank");
       a.addEventListener("click", function() {myFunction(race.raceName)});
-      a.setAttribute("style", "padding-top: 3px;");
       a.textContent = race.raceName;
       R.className = "race-List";
       R.appendChild(a);
@@ -55,7 +54,7 @@ fetch(apiUrl)
               r.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
               r.setAttribute("target", "_blank");
               r.setAttribute("rel", "noopener noreferrer");
-              r.setAttribute("style" ,"padding-top: 3px");
+              r.setAttribute("style" ,"padding-top: 2px");
               r.textContent = "Round: "
               r.textContent += file2.MRData.RaceTable.Races[i].round;
               R.className = "facts";
@@ -67,7 +66,7 @@ fetch(apiUrl)
               c.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
               c.setAttribute("target", "_blank");
               c.setAttribute("rel", "noopener noreferrer");
-              c.setAttribute("style" ,"padding-top: 3px");
+              c.setAttribute("style" ,"padding-top: 2px");
               c.textContent = "Date: ";
               c.textContent += file2.MRData.RaceTable.Races[i].date;
               C.className = "facts";
@@ -79,7 +78,7 @@ fetch(apiUrl)
               f.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
               f.setAttribute("target", "_blank");
               f.setAttribute("rel", "noopener noreferrer");
-              f.setAttribute("style" ,"padding-top: 3px");
+              f.setAttribute("style" ,"padding-top: 2px");
               f.textContent = "Time: ";
               f.textContent += file2.MRData.RaceTable.Races[i].time;
               F.className = "facts";
@@ -91,7 +90,7 @@ fetch(apiUrl)
               d.setAttribute("href", file2.MRData.RaceTable.Races[i].url);
               d.setAttribute("target", "_blank");
               d.setAttribute("rel", "noopener noreferrer");
-              d.setAttribute("style" ,"padding-top: 3px");
+              d.setAttribute("style" ,"padding-top: 2px");
               d.textContent += file2.MRData.RaceTable.Races[i].url;
               D.className = "facts";
               D.appendChild(d);

@@ -1,33 +1,66 @@
 .list-right{
     position:absolute;
     right:0%;
-    left:60%;
+    left:53%;
     list-style: none;
+    box-sizing: border-box;
+    width: 37%;
+    border: 5px solid black;
+    border-radius: 25px;
+    float: left;
+    height: 25%;
+    font-size: 16px;
 }
+
 
 .list-left{
     position:absolute;
     right:0%;
-    left:20%;
+    left:17%;
     list-style: none;
-
+    box-sizing: border-box;
+    width: 30%;
+    border: 5px solid black;
+    border-radius: 25px;
+    float: left;
+    font-size: 16px;
 }
 
-.wc{
+
+.facts{
+    list-style: none;
+}
+
+div.wc{
     bottom:0%;
     top:80%;
     left:45%;
     position:absolute;
 }
 
-/* .race-List{
-    list-style: none;
-} */
-
-.facts{
+div.facts{
     list-style: none;
 }
 
-.header{
+div.header{
+   text-align: center;
+   opacity: 1;
+}
+
+div.header2{
+    text-align:center;
+
+}
+
+.background {
+    position: absolute;
+    opacity: 0.5;
+
+}
+
+.list-head {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
     
-}
+
