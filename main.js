@@ -2,7 +2,7 @@ const raceList = document.querySelector(".race-List");
 const facts = document.querySelector(".facts");
 
 const api = {
-  url: "http://ergast.com/api/f1/2021.json",
+  url: "https://ergast.com/api/f1/2021.json",
 };
 
 const { url } = api;
@@ -37,7 +37,7 @@ fetch(apiUrl)
 
   function myFunction(raceName){
     const api2 = {
-      url:"http://ergast.com/api/f1/2021.json"
+      url:"https://ergast.com/api/f1/2021.json"
     };
     const {url} = api2;
     const apiUrl2 = `${url}`;
