@@ -6,4 +6,4 @@ Website Link: https://baeyong.github.io/FormulaOneWebsite/
 
 # Demo
 
-![Demo](/pictures/Website%20Demo.mov)
+![Demo](/pictures/Website%20Demo.mp4)
