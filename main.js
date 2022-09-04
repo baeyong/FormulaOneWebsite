@@ -30,7 +30,6 @@ fetch(apiUrl)
       R.appendChild(a);
       raceList.appendChild(R);
 
-      // do the work here
     })
   }
   );
